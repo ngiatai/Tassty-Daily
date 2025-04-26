@@ -1,0 +1,185 @@
+/* menu */
+
+.menu-group {
+    position: relative;
+}
+
+.menu-group:hover::after {
+    content: '';
+    width: 100%;
+    height: 150px;
+    bottom: -150px;
+
+    position: absolute;
+    left: 0px;
+    z-index: 10;
+}
+
+.menu-group:hover:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+
+    transform: rotate(45deg) translateY(6px);
+    background: var(--menu-background);
+    position: absolute;
+    bottom: -13px;
+    left: 20px;
+    z-index: 60;
+}
+
+.menu-content {
+    margin-top: 12px;
+    width: 250px;
+    padding: 30px 20px;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 12px;
+    background-color: var(--menu-background);
+    box-shadow: 0px 0px 2px #c8c8c8;
+    z-index: 50;
+}
+
+.menu-content::after {
+    content: '';
+    bottom: 100%;
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    left: 0;
+}
+
+.menu-content:hover {
+    opacity: 100;
+    display: block;
+}
+
+.menu-group:hover .menu-content {
+    opacity: 100;
+    display: block;
+}
+
+.menu-content .menu-item {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 24px;
+    font-weight: 500;
+    display: block;
+}
+
+.menu-content .menu-item:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.menu-content .menu-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-content .menu-item:hover a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.menu-content .menu-item a {
+    display: block;
+}
+
+.menu-content-large {
+    position: absolute;
+    margin-left: 50px;
+
+    display: none;
+    padding: 10px 20px;
+    margin-top: 12px;
+    width: calc(100vw - 100px);
+    opacity: 0;
+    border-radius: 12px;
+    background-color: var(--menu-background);
+    box-shadow: 0px 0px 2px #c8c8c8;
+    z-index: 50;
+    max-width: 1120px;
+    border: 1 solid #b6b6b6;
+}
+
+.menu-content-large:hover {
+    display: block;
+    opacity: 100;
+}
+
+.menu-content-large::after {
+    content: '';
+    bottom: 100%;
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    left: 0;
+}
+
+.menu-group:hover .menu-content-large {
+    display: block;
+    opacity: 100;
+}
+
+.menu-content-subitem-group {
+    position: relative;
+    cursor: default;
+}
+
+.menu-content-subitem-group .bx {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-content-subitem-content {
+    margin-top: 8px;
+    width: 250px;
+    padding: 30px 20px;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -120%;
+    border-radius: 8px;
+    background-color: var(--menu-background);
+    box-shadow: -1px 0px 2px #c8c8c8;
+}
+
+.menu-content-subitem-group:hover .menu-content-subitem-content {
+    display: block;
+    opacity: 100;
+}
+
+.menu-content-subitem-content:hover {
+    display: block;
+    opacity: 100;
+}
+
+.menu-content-subitem-content::after {
+    content: '';
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    right: 100%;
+}
+
+.menu-content-subitem-content .menu-content-subitem-item {
+    padding: 10px 24px;
+    color: #333;
+    color: #333 !important;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+.menu-content-subitem-content .menu-content-subitem-item:hover {
+    color: var(--primary) !important;
+    text-decoration: none;
+}
